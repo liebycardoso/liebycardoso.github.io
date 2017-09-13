@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.land {
+  fill: #ddd;
+}
+
+.state-borders {
+  fill: none;
+  stroke: #fff;
+}
+
+.airport-arc {
+  fill: none;
+}
+
+.airport:hover .airport-arc {
+  stroke: #f00;
+}
+
+.airport-cell {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 0.1;
+  pointer-events: all;
+}
+
+</style>
+<svg width="960" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script>
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var projection = d3.geoMercator()
+    .translate([width / 2, height / 2])
+    .scale(200);
+
+var radius = d3.scaleSqrt()
+    .domain([0, 100])
+    .range([0, 14]);
+
+var path = d3.geoPath()
+    .projection(projection)
+    .pointRadius(2.5);
+
+var arcs = svg.append("g")
+      .attr("class","arcs");
+
+var voronoi = d3.voronoi()
+    .extent([[-1, -1], [width + 1, height + 1]]);
+
+d3.queue()
+    .defer(d3.json, "geo.json")
+    .defer(d3.csv, "unhcr_2016.csv", formatCountry)
+    .await(ready);
+
+function ready(error, worldmap, countries) {
+  if (error) throw error;
+
+  function agg_year(leaves) {
+    var total = d3.sum(leaves, function(d) {
+          return d['Total_Population'];
+      });
+    var coords = leaves.map(function(d) {
+        return projection([+d.long_dest, +d.lat_dest]);
+    });
+
+    var center_x = d3.mean(coords, function(d) {
+        return d[0];
+    });
+
+    var center_y = d3.mean(coords, function(d) {
+        return d[1];
+    });
+
+    var origin = leaves[0]['Origin'];
+    var destination = leaves[0]['Destination'];
+
+    return {
+      'origin' : origin,
+      'destination' : destination,
+      'Total_Population' : total,
+      'x' : center_x,
+      'y' : center_y
+
+    };
+  }//agg_year(l
+
+  var nested = d3.nest()
+               .key(function(d) {
+                  return d['Origin'];
+               })
+//               .key(function(d) {
+//                  return d['Destination'];
+//               })
+               .rollup(agg_year)
+               .entries(countries);
+
+  nested.forEach(function(d) {  
+      d.arcs =  {type: "MultiLineString", coordinates: []};
+  });
+
+  var airportByIata = d3.map(nested, function(d) { return d.key; });
+
+  nested.forEach(function(country) {
+    var source = airportByIata.get(country.value.origin),
+        target = airportByIata.get(country.value.destination);
+    if (source && target) {
+      source.arcs.coordinates.push([source, target]);
+      target.arcs.coordinates.push([target, source]);  
+    }
+    
+  });
+
+  nested = nested
+      .filter(function(d) { return d.arcs.coordinates.length; });
+
+  svg.append("path")
+      .datum(topojson.feature(worldmap, worldmap.objects.land))
+      .attr("class", "land")
+      .attr("d", path);
+
+  svg.append("path")
+      .datum(topojson.mesh(worldmap, worldmap.objects.countries, function(a, b) { return a !== b; }))
+      .attr("class", "state-borders")
+      .attr("d", path);
+
+  svg.append("path")
+      .datum({type: "MultiPoint", coordinates: nested})
+      .attr("class", "airport-dots")
+      .attr("d", path);
+
+  var airport = svg.selectAll(".airport")
+    .data(nested)
+    .enter().append("g")
+    .attr("class", "airport");
+
+  airport.append("title")
+      .text(function(d) { return "\n" + d.arcs.coordinates.length + " flights"; });
+
+  airport.append("path")
+      .attr("class", "airport-arc")
+      .attr("d", function(d) { return path(d.arcs); });
+
+  airport.append("path")
+      .data(voronoi.polygons(nested.map(projection)))
+      .attr("class", "airport-cell")
+      .attr("d", function(d) { return d ? "M" + d.join("L") + "Z" : null; });
+ 
+/*
+  function lngLatToArc(d, sourceName, targetName, bend){
+          // If no bend is supplied, then do the plain square root
+          bend = bend || 1;
+          // `d[sourceName]` and `d[targetname]` are arrays of `[lng, lat]`
+          // Note, people often put these in lat then lng, but mathematically we want x then y which is `lng,lat`
+          var sourceLngLat = sourceName,
+            targetLngLat = targetName;
+          
+
+          if (targetLngLat && sourceLngLat) {
+            var sourceXY = projection( sourceName ),
+              targetXY = projection( targetName );
+            // Uncomment this for testing, useful to see if you have any null lng/lat values
+            // if (!targetXY) console.log(d, targetLngLat, targetXY)
+            var sourceX = sourceXY[0],
+              sourceY = sourceXY[1];
+            var targetX = targetXY[0],
+              targetY = targetXY[1];
+            var dx = targetX - sourceX,
+              dy = targetY - sourceY,
+              dr = Math.sqrt(dx * dx + dy * dy)*bend;
+            // To avoid a whirlpool effect, make the bend direction consistent regardless of whether the source is east or west of the target
+            var west_of_source = (targetX - sourceX) < 0;
+            
+            if (west_of_source) return "M" + targetX + "," + targetY + "A" + dr + "," + dr + " 0 0,1 " + sourceX + "," + sourceY;
+            return "M" + sourceX + "," + sourceY + "A" + dr + "," + dr + " 0 0,1 " + targetX + "," + targetY;
+            
+          } else {
+            return "M0,0,l0,0z";
+          }
+              };//function lngLatToArc
+
+  country.selectAll("path")
+    .data(countries)
+    .enter()
+    .append("path")
+    .attr('d', function(d) { 
+      return lngLatToArc(d, [+d.long_dest, +d.lat_dest], [+d.long_origin, +d.lat_origin], 15); 
+      // A bend of 5 looks nice and subtle, but this will depend on the length of your arcs and the visual look your visualization requires. Higher number equals less bend.
+  });
+*/
+ }
+
+function formatCountry(d) {
+  d[0] = +d.long_origin;
+  d[1] = +d.lat_origin;
+  d[2] = +d.long_dest;
+  d[3] = +d.lat_dest;
+  d.arcs = {type: "MultiLineString", coordinates: []};
+  return d;
+}
+
+function typeFlight(d) {
+  d.count = +d.count;
+  return d;
+}
+</script>
