@@ -179,6 +179,8 @@ function ready(error, worldmap, countries, countryGeo) {
   // Calcula o voronoi para as posicoes
     var polygons = voronoi.polygons(filteredYear.map(projection));
 
+    d3.selectAll(".country").remove();
+    
     var country = svg.selectAll(".country")
                      .data(filteredYear)
                      .enter()
@@ -194,7 +196,7 @@ function ready(error, worldmap, countries, countryGeo) {
                    .attr("class", "circle");
     
     // remove os dados que não estão vinculados a nova selecao
-    country.exit().remove();
+    //country.exit().remove();
     
     
     ////////////////////////////// Desenha Circulos ///////////////////////////////    
@@ -204,7 +206,7 @@ function ready(error, worldmap, countries, countryGeo) {
         .attr('cy', function(d) { return projection([d[0],d[1]])[1]; })
         .attr('r', function (d) { return radius(d.total_population); });
 
-    circle.exit().remove();
+    //circle.exit().remove();
 
     country.append("title")
         .text(function(d) { return d.key + "\n" + 
@@ -222,7 +224,7 @@ function ready(error, worldmap, countries, countryGeo) {
         .attr("class", "voronoi")
         .attr("d", function(d) { return d ? "M" + d.join("L") + "Z" : null; });
 
-    
+    //country.exit().remove();
       
   }// drawn    
  ///////////////////////////////////////////////////////////////////////////
