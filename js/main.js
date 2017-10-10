@@ -222,10 +222,88 @@ function ready(error, worldmap, countries, countryGeo) {
     d3.selectAll("div.button").remove();
 
     
-      year_idx++;
+    year_idx++;
 
     if (year_idx >= years.length) {
       clearInterval(year_interval);
+      var x = d3.scaleLinear()
+      .domain([years[0], years.slice(-1).pop()])
+      .range([0, 1600])
+      .clamp(true);
+
+      var slider = d3.select("#year").append("svg")
+      .attr("width", 1600)
+      .attr("height", 40)
+      .append('g')
+      .attr("class", "slider")
+      .attr("transform", "translate(" + margin + "," + 40 / 2 + ")");
+
+      /*
+      var sliderArea = d3.select("#year")
+      .style("width", 1600)
+      .style("height",500)
+      .style("float","left");
+
+      var slider = sliderArea.append("svg")
+          .append("g")
+          .attr("class", "slider")
+          .attr("transform", "translate(" + margin + "," + 500 / 2 + ")");
+      */
+
+      slider.append("line")
+          .attr("class", "track")
+          .attr("x1", x.range()[0])
+          .attr("x2", x.range()[1])
+          .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+          .attr("class", "track-inset")
+          .select(function() { return this.parentNode.appendChild(this.cloneNode(true)); })
+          .attr("class", "track-overlay")
+          .call(d3.drag()
+              .on("start.interrupt", function() { slider.interrupt(); })
+              .on("start drag", function() { update(x.invert(d3.event.x)); }));
+      
+      slider.insert("g", ".track-overlay")
+          .attr("class", "ticks")
+          .attr("transform", "translate(0," + 18 + ")")
+        .selectAll("text")
+        .data(x.ticks(years.length-1))
+        .enter().append("text")
+          .attr("x", x)
+          .attr("text-anchor", "middle")
+          .text(function(d) { return d ; });
+      
+      var handle = slider.insert("circle", ".track-overlay")
+          .attr("class", "handle")
+          .attr("r", 9);
+
+      function update(value) {
+        var d = Math.round(value);
+        handle.attr("cx", x(d));
+        drawn(d);
+      }
+
+     
+      
+
+/*
+
+      // SOLUCAO 2
+      // slider
+      d3.select("#year").append("input")
+      .attr("type", "range")
+      .attr("min", years[0])
+      .attr("max", years.slice(-1).pop())
+      .attr("value", years[0])
+      .attr("id", "year")
+      .text(x);
+
+      //d3.select("body").insert("h2", ":first-child").text(headline + init_year);
+
+      d3.select("#year").on("input", function() {
+        drawn(+this.firstChild.value);
+      });
+*/
+      /*
       var buttons = d3.select("#year")
       .selectAll("button")
       .data(years)
@@ -243,43 +321,11 @@ function ready(error, worldmap, countries, countryGeo) {
           .style("color", "white");
         drawn(d);
         });
-
-
-      /*
-            var buttons = d3.select("body")
-                    .append("div")
-                    .attr("class", "years_buttons")
-                    .selectAll("div")
-                    .data(years)
-                    .enter()
-                    .append("div")
-                    .text(function(d) { return d; });
-      
-            buttons.on("click", function(d) {
-              d3.select(this)
-                .transition()
-                .duration(500)
-                .style("background", "lightBlue")
-                .style("color", "white");
-              update(d);
-            });
       */
     }// if(year_idx >= years.length) {
   }, 1000);// var year_interval
-
-  //Start explanation about the World Bank
-  /*
-  d3.select("#explanation")
-    .style("visibility","visible")
-    .style("top", 200 + "px")
-    .style("left", 50 + "px")
-    .style("width", 550 + "px")
-    .html("<p>Societies are shifting from having a rural nature to a more and more urban nature. We face the opportunity to set the course of urbanization on a more sustainable and equitable path</p>" +
-        "<p>This visualization is based on data on urbanization in East Asia between <span style='color: #858483;'>2000</span> and <span style='color: #DA6761;'>2010</span> collected by the World Bank using Satellite images and population models. It aims to provide you with a clear view on the magnitude of changes that can happen in only one decade and challenges you to think about the impact on the following years<p>")
-    .transition().duration(1000)
-    .style("opacity",1);
-*/
 }//function ready(error, worldmap, countries) {
+
 
 function altData(d) {
   d.Year = +d.Year;
@@ -321,3 +367,4 @@ function agg_country(leaves) {
     'arcs': { type: "MultiLineString", coordinates: [] }
   };
 }//agg_country
+
