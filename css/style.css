@@ -70,3 +70,32 @@ body {
   font-size: 20px;
   background: rgba(205,183,181, 0.1);
 }
+
+/*https://www.sanwebe.com/css3-button-generator*/
+#year button {
+    display: inline-block;
+    border:1px solid #AFA2A1;
+    color: #78663D;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    font-family: Verdana;
+    width: auto;
+    height: auto;
+    font-size: 9px;
+    padding: 1px 5px;
+    box-shadow: 0 -1px 0 0 #E2D6D5,inset 0 -1px 0 0 #efb667,inset 0 0 0 1px #efb667,0 2px 4px 0 #D4D4D4;
+    -moz-box-shadow: 0 -1px 0 0 #E2D6D5,inset 0 -1px 0 0 #efb667,inset 0 0 0 1px #efb667,0 2px 4px 0 #D4D4D4;
+    -webkit-box-shadow: 0 -1px 0 0 #E2D6D5,inset 0 -1px 0 0 #efb667,inset 0 0 0 1px #efb667,0 2px 4px 0 #D4D4D4;
+    background-image: linear-gradient(to top, #CDB7B7, #CDBDBB);
+    background-color: #CDB7B7;
+   }
+
+   #year button:hover, #year button:active{
+    border:1px solid #967D09;
+    color: #705D07;
+    box-shadow: 0 1px 0 0 #efb667,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+    -moz-box-shadow: 0 1px 0 0 #efb667,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+    -webkit-box-shadow: 0 1px 0 0 #efb667,inset 0 -1px 0 0 #E3C852,inset 0 0 0 1px #FCE88D;
+    background-color: #EFB667;
+   }
