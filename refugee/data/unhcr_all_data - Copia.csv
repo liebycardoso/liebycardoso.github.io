@@ -1,4 +1,4 @@
-﻿Year,Destination,Origin,Refugees,Total_Population
+Year,Destination,Origin,Refugees,Total_Population
 1960,Dem. Rep. of the Congo,Angola,150000,150000
 1961,Dem. Rep. of the Congo,Angola,150000,150000
 1961,Togo,Ghana,5000,5000
@@ -25,6 +25,7 @@
 1964,Dem. Rep. of the Congo,Angola,200000,200000
 1964,Egypt,Armenia,170,170
 1964,Hong Kong,China,1120000,1120000
+1964,"China, Macao SAR",China,80000,80000
 1964,Uganda,Dem. Rep. of the Congo,34000,34000
 1964,Burundi,Dem. Rep. of the Congo,20000,20000
 1964,Central African Rep.,Dem. Rep. of the Congo,3000,3000
@@ -47,7 +48,7 @@
 1965,Dem. Rep. of the Congo,Angola,220000,220000
 1965,Rwanda,Burundi,3000,4000
 1965,Hong Kong,China,1250000,1250000
-1965,Macao,China,80000,80000
+1965,"China, Macao SAR",China,80000,80000
 1965,Uganda,Congo,,17000
 1965,Burundi,Congo,,12000
 1965,Uganda,Dem. Rep. of the Congo,28000,28000
@@ -77,7 +78,7 @@
 1966,Senegal,Cabo Verde,300,300
 1966,Bhutan,China,3000,3000
 1966,Hong Kong,China,1250040,1250040
-1966,Macao,China,73770,73770
+1966,"China, Macao SAR",China,73770,73770
 1966,Burundi,Congo,,15000
 1966,Tanzania,Congo,,2200
 1966,Uganda,Dem. Rep. of the Congo,33000,33000
@@ -108,7 +109,7 @@
 1967,Dem. Rep. of the Congo,Angola,350000,350000
 1967,Zambia,Angola,6200,6200
 1967,Senegal,Cabo Verde,300,300
-1967,Macao,China,74000,74000
+1967,"China, Macao SAR",China,74000,74000
 1967,Zambia,Congo,930,2560
 1967,Tanzania,Congo,,150
 1967,Uganda,Dem. Rep. of the Congo,34140,34140
@@ -144,7 +145,7 @@
 1968,Cyprus,Armenia,200,200
 1968,Senegal,Cabo Verde,310,310
 1968,Botswana,Cabo Verde,120,120
-1968,Macao,China,70000,70000
+1968,"China, Macao SAR",China,70000,70000
 1968,Zambia,Congo,330,950
 1968,Burundi,Congo,,5000
 1968,Tanzania,Congo,,50
@@ -188,7 +189,7 @@
 1969,Cyprus,Armenia,200,200
 1969,Turkey,Bulgaria,90,90
 1969,Senegal,Cabo Verde,400,400
-1969,Macao,China,65000,65000
+1969,"China, Macao SAR",China,65000,65000
 1969,Uganda,Congo,,90
 1969,Zambia,Congo,,330
 1969,Sudan,Congo,,950
@@ -243,7 +244,7 @@
 1970,Senegal,Cabo Verde,400,400
 1970,Sudan,Chad,500,500
 1970,Central African Rep.,Chad,1400,1400
-1970,Macao,China,66000,66000
+1970,"China, Macao SAR",China,66000,66000
 1970,Uganda,Congo,,210
 1970,Sudan,Congo,,360
 1970,Burundi,Congo,,3000
@@ -310,7 +311,7 @@
 1971,Turkey,Bulgaria,340,340
 1971,Viet Nam,Cambodia,57000,57000
 1971,Central African Rep.,Chad,1400,1400
-1971,Macao,China,70000,70000
+1971,"China, Macao SAR",China,70000,70000
 1971,Brazil,Cuba,37800,37800
 1971,Mexico,Cuba,2200,2200
 1971,Venezuela,Cuba,14500,14500
@@ -374,7 +375,7 @@
 1972,Tanzania,Burundi,90000,90000
 1972,Viet Nam,Cambodia,55000,55000
 1972,Central African Rep.,Chad,1500,1500
-1972,Macao,China,75000,75000
+1972,"China, Macao SAR",China,75000,75000
 1972,Brazil,Cuba,200,200
 1972,Guatemala,Cuba,70,70
 1972,Mexico,Cuba,2150,2150
@@ -398,7 +399,7 @@
 1972,Tanzania,Malawi,100,100
 1972,Zambia,Mozambique,6400,6400
 1972,Tanzania,Mozambique,58000,58000
-1972,Macao,Myanmar,5000,5000
+1972,"China, Macao SAR",Myanmar,5000,5000
 1972,Laos,Myanmar,700,700
 1972,Zambia,Namibia,900,900
 1972,Botswana,Namibia,50,50
@@ -963,7 +964,7 @@
 1979,Malaysia,Viet Nam,34300,34300
 1979,Peru,Viet Nam,5430,5430
 1979,Hong Kong,Viet Nam,55700,56460
-1979,Macao,Viet Nam,3490,3490
+1979,"China, Macao SAR",Viet Nam,3490,3490
 1979,South Korea,Viet Nam,170,170
 1979,Algeria,Western Sahara,50000,50000
 1979,Yemen,Yemen,15000,15000
@@ -1119,7 +1120,7 @@
 1980,Italy,Viet Nam,2418,2418
 1980,Malaysia,Viet Nam,12160,12160
 1980,Hong Kong,Viet Nam,24070,30520
-1980,Macao,Viet Nam,2920,2920
+1980,"China, Macao SAR",Viet Nam,2920,2920
 1980,Algeria,Western Sahara,50000,50000
 1980,Yemen,Yemen,15000,15000
 1980,Italy,Yemen,1,1
@@ -1283,7 +1284,7 @@
 1981,Italy,Viet Nam,2468,2468
 1981,Malaysia,Viet Nam,9850,35510
 1981,Hong Kong,Viet Nam,13540,13540
-1981,Macao,Viet Nam,1200,2720
+1981,"China, Macao SAR",Viet Nam,1200,2720
 1981,South Korea,Viet Nam,60,60
 1981,Algeria,Western Sahara,165000,165000
 1981,Italy,Yemen,1,1
@@ -1487,7 +1488,7 @@
 1982,Italy,Viet Nam,2573,2573
 1982,Malaysia,Viet Nam,8440,8440
 1982,Hong Kong,Viet Nam,12620,12620
-1982,Macao,Viet Nam,970,970
+1982,"China, Macao SAR",Viet Nam,970,970
 1982,South Korea,Viet Nam,70,70
 1982,Algeria,Western Sahara,165000,165000
 1982,Italy,Yemen,1,1
@@ -1688,7 +1689,7 @@
 1983,Malaysia,Viet Nam,10080,10080
 1983,Cote dIvoire,Viet Nam,120,120
 1983,Hong Kong,Viet Nam,12770,12770
-1983,Macao,Viet Nam,800,800
+1983,"China, Macao SAR",Viet Nam,800,800
 1983,Algeria,Western Sahara,165000,165000
 1983,Italy,Yemen,1,1
 1983,Dem. Rep. of the Congo,Zambia,1200,1200
@@ -1902,7 +1903,7 @@
 1984,Malaysia,Viet Nam,8850,8850
 1984,Cote dIvoire,Viet Nam,180,180
 1984,Hong Kong,Viet Nam,11900,11900
-1984,Macao,Viet Nam,730,730
+1984,"China, Macao SAR",Viet Nam,730,730
 1984,Algeria,Western Sahara,165000,165000
 1984,Italy,Yemen,1,1
 1984,Botswana,Zimbabwe,3760,3760
@@ -2151,7 +2152,7 @@
 1985,Malaysia,Viet Nam,8460,8460
 1985,Cote dIvoire,Viet Nam,200,200
 1985,Hong Kong,Viet Nam,9400,9400
-1985,Macao,Viet Nam,700,700
+1985,"China, Macao SAR",Viet Nam,700,700
 1985,Algeria,Western Sahara,165000,165000
 1985,Italy,Yemen,1,1
 1985,Botswana,Zimbabwe,4250,4250
@@ -2374,7 +2375,7 @@
 1986,Malaysia,Viet Nam,9000,9000
 1986,Cote dIvoire,Viet Nam,250,250
 1986,Hong Kong,Viet Nam,8000,8000
-1986,Macao,Viet Nam,600,600
+1986,"China, Macao SAR",Viet Nam,600,600
 1986,Algeria,Western Sahara,165000,165000
 1986,Yemen,Yemen,100000,100000
 1986,Italy,Yemen,1,1
@@ -2594,7 +2595,7 @@
 1987,Malaysia,Viet Nam,9120,9120
 1987,Cote dIvoire,Viet Nam,260,260
 1987,Hong Kong,Viet Nam,9530,9530
-1987,Macao,Viet Nam,500,500
+1987,"China, Macao SAR",Viet Nam,500,500
 1987,South Korea,Viet Nam,60,60
 1987,Algeria,Western Sahara,165000,165000
 1987,Yemen,Yemen,70000,70000
@@ -2904,7 +2905,7 @@
 1988,Italy,Viet Nam,3113,3113
 1988,Malaysia,Viet Nam,14210,14210
 1988,Cote dIvoire,Viet Nam,260,260
-1988,Macao,Viet Nam,440,440
+1988,"China, Macao SAR",Viet Nam,440,440
 1988,South Korea,Viet Nam,120,120
 1988,United States of America,Viet Nam,113734,113734
 1988,Algeria,Western Sahara,165000,165000
@@ -3290,7 +3291,7 @@
 1989,Malaysia,Viet Nam,20475,20493
 1989,Denmark,Viet Nam,2285,2285
 1989,Hong Kong,Viet Nam,,874
-1989,Macao,Viet Nam,422,422
+1989,"China, Macao SAR",Viet Nam,422,422
 1989,South Korea,Viet Nam,230,230
 1989,United States of America,Viet Nam,120243,120243
 1989,Cuba,Western Sahara,2190,2190
@@ -3783,7 +3784,7 @@
 1990,Denmark,Viet Nam,1668,1668
 1990,Sweden,Viet Nam,5626,5626
 1990,Hong Kong,Viet Nam,8161,13623
-1990,Macao,Viet Nam,205,205
+1990,"China, Macao SAR",Viet Nam,205,205
 1990,South Korea,Viet Nam,230,230
 1990,United States of America,Viet Nam,137577,137577
 1990,Algeria,Western Sahara,165000,165000
@@ -4339,7 +4340,7 @@
 1991,Denmark,Viet Nam,1151,1151
 1991,Sweden,Viet Nam,5286,5286
 1991,Hong Kong,Viet Nam,4409,12075
-1991,Macao,Viet Nam,116,116
+1991,"China, Macao SAR",Viet Nam,116,116
 1991,South Korea,Viet Nam,162,162
 1991,United States of America,Viet Nam,158999,158999
 1991,Algeria,Western Sahara,165000,165000
@@ -5026,7 +5027,7 @@
 1992,Denmark,Viet Nam,662,662
 1992,Sweden,Viet Nam,5112,5112
 1992,Hong Kong,Viet Nam,2600,14933
-1992,Macao,Viet Nam,15,15
+1992,"China, Macao SAR",Viet Nam,15,15
 1992,South Korea,Viet Nam,149,149
 1992,United States of America,Viet Nam,180326,180326
 1992,Algeria,Western Sahara,165000,165000
@@ -6302,7 +6303,7 @@
 1993,Ethiopia,Sudan,44376,44376
 1993,Benin,Sudan,7,7
 1993,Cote dIvoire,Sudan,12,12
-1993,Macao,Sudan,,1
+1993,"China, Macao SAR",Sudan,,1
 1993,Gambia,Sudan,5,5
 1993,Syria,Sudan,200,200
 1993,United States of America,Sudan,661,661
@@ -6448,7 +6449,7 @@
 1993,Peru,Viet Nam,2,2
 1993,Cote dIvoire,Viet Nam,253,253
 1993,Hong Kong,Viet Nam,1846,14147
-1993,Macao,Viet Nam,10,10
+1993,"China, Macao SAR",Viet Nam,10,10
 1993,United States of America,Viet Nam,205469,205469
 1993,Algeria,Western Sahara,165000,165000
 1993,Greece,Yemen,1,1
@@ -8112,7 +8113,7 @@
 1994,Peru,Viet Nam,2,2
 1994,Cote dIvoire,Viet Nam,253,253
 1994,Hong Kong,Viet Nam,1698,7637
-1994,Macao,Viet Nam,9,9
+1994,"China, Macao SAR",Viet Nam,9,9
 1994,United States of America,Viet Nam,211376,211376
 1994,Cuba,Western Sahara,1493,1493
 1994,Algeria,Western Sahara,165000,165000
@@ -9933,7 +9934,7 @@
 1995,Peru,Viet Nam,1,1
 1995,Cote dIvoire,Viet Nam,253,253
 1995,Hong Kong,Viet Nam,1479,3152
-1995,Macao,Viet Nam,8,8
+1995,"China, Macao SAR",Viet Nam,8,8
 1995,United States of America,Viet Nam,201816,201816
 1995,Algeria,Western Sahara,165000,165000
 1995,Djibouti,Yemen,2,2
@@ -63463,7 +63464,7 @@
 2009,Costa Rica,Afghanistan,2,2
 2009,Cote dIvoire,Afghanistan,17,17
 2009,Hong Kong,Afghanistan,1,17
-2009,Macao,Afghanistan,,1
+2009,"China, Macao SAR",Afghanistan,,1
 2009,Czech,Afghanistan,222,231
 2009,Iran,Afghanistan,1022494,1030240
 2009,South Korea,Afghanistan,2,11
@@ -65941,7 +65942,7 @@
 2009,Benin,Iraq,6,6
 2009,Costa Rica,Iraq,2,2
 2009,Bolivia (Plurinational State of),Iraq,16,16
-2009,Macao,Iraq,,1
+2009,"China, Macao SAR",Iraq,,1
 2009,Czech,Iraq,166,198
 2009,Gambia,Iraq,,1
 2009,Iran,Iraq,47924,53640
@@ -67072,7 +67073,7 @@
 2009,Sri Lanka,Pakistan,167,500
 2009,Cote dIvoire,Pakistan,1,1
 2009,Hong Kong,Pakistan,18,126
-2009,Macao,Pakistan,6,6
+2009,"China, Macao SAR",Pakistan,6,6
 2009,Czech,Pakistan,20,26
 2009,Iran,Pakistan,13,32
 2009,South Korea,Pakistan,1,72
@@ -68155,7 +68156,7 @@
 2009,Iceland,Syria,1,1
 2009,Norway,Syria,152,449
 2009,Benin,Syria,1,1
-2009,Macao,Syria,,4
+2009,"China, Macao SAR",Syria,,4
 2009,Czech,Syria,15,71
 2009,Iran,Syria,,1
 2009,Moldova,Syria,10,12
@@ -68952,7 +68953,7 @@
 2010,Ethiopia,Afghanistan,1,1
 2010,Costa Rica,Afghanistan,2,2
 2010,Hong Kong,Afghanistan,6,14
-2010,Macao,Afghanistan,,1
+2010,"China, Macao SAR",Afghanistan,,1
 2010,Czech,Afghanistan,224,233
 2010,Iran,Afghanistan,1027577,1037703
 2010,South Korea,Afghanistan,7,23
@@ -70047,7 +70048,7 @@
 2010,Costa Rica,Colombia,10214,10530
 2010,Bolivia (Plurinational State of),Colombia,127,162
 2010,Hong Kong,Colombia,,2
-2010,Curacao,Colombia,,2
+2010,Curaçao,Colombia,,2
 2010,Syria,Colombia,,4
 2010,United States of America,Colombia,25607,25772
 2010,Venezuela,Colombia,201467,217161
@@ -71334,7 +71335,7 @@
 2010,Norway,India,22,66
 2010,Costa Rica,India,7,7
 2010,Hong Kong,India,,49
-2010,Macao,India,,3
+2010,"China, Macao SAR",India,,3
 2010,Czech,India,2,5
 2010,South Korea,India,,5
 2010,Moldova,India,1,1
@@ -71562,7 +71563,7 @@
 2010,Benin,Iraq,6,6
 2010,Costa Rica,Iraq,2,2
 2010,Bolivia (Plurinational State of),Iraq,16,16
-2010,Macao,Iraq,,1
+2010,"China, Macao SAR",Iraq,,1
 2010,Czech,Iraq,173,195
 2010,Dominican Republic,Iraq,,6
 2010,Gambia,Iraq,,1
@@ -71633,7 +71634,7 @@
 2010,Ireland,Jamaica,9,11
 2010,Canada,Jamaica,348,868
 2010,Sweden,Jamaica,,1
-2010,Curacao,Jamaica,7,7
+2010,Curaçao,Jamaica,7,7
 2010,United States of America,Jamaica,210,237
 2010,Philippines,Japan,,1
 2010,Australia,Japan,1,5
@@ -72783,7 +72784,7 @@
 2010,Sri Lanka,Pakistan,164,300
 2010,Cote dIvoire,Pakistan,1,1
 2010,Hong Kong,Pakistan,23,89
-2010,Macao,Pakistan,,1
+2010,"China, Macao SAR",Pakistan,,1
 2010,Czech,Pakistan,20,27
 2010,Iran,Pakistan,13,38
 2010,South Korea,Pakistan,8,142
@@ -73917,7 +73918,7 @@
 2010,Norway,Syria,186,378
 2010,Benin,Syria,1,1
 2010,Bolivia (Plurinational State of),Syria,,2
-2010,Macao,Syria,,4
+2010,"China, Macao SAR",Syria,,4
 2010,Czech,Syria,23,59
 2010,Dominican Republic,Syria,,1
 2010,Iran,Syria,,1
@@ -74761,7 +74762,7 @@
 2011,Costa Rica,Afghanistan,2,2
 2011,Cote dIvoire,Afghanistan,18,18
 2011,Hong Kong,Afghanistan,7,12
-2011,Macao,Afghanistan,,1
+2011,"China, Macao SAR",Afghanistan,,1
 2011,Czech,Afghanistan,224,224
 2011,Iran,Afghanistan,840451,859723
 2011,South Korea,Afghanistan,9,74
@@ -75604,7 +75605,7 @@
 2011,Bolivia (Plurinational State of),Cameroon,1,1
 2011,Cote dIvoire,Cameroon,1,6
 2011,Hong Kong,Cameroon,,2
-2011,Macao,Cameroon,,1
+2011,"China, Macao SAR",Cameroon,,1
 2011,Congo,Cameroon,1,3
 2011,Czech,Cameroon,6,6
 2011,Gambia,Cameroon,1,1
@@ -75870,7 +75871,7 @@
 2011,Costa Rica,Colombia,10297,10624
 2011,Bolivia (Plurinational State of),Colombia,148,165
 2011,Hong Kong,Colombia,,7
-2011,Curacao,Colombia,,5
+2011,Curaçao,Colombia,,5
 2011,United States of America,Colombia,22004,22181
 2011,Venezuela,Colombia,201941,219133
 2011,Uganda,Comoros,1,1
@@ -77169,7 +77170,7 @@
 2011,Peru,India,,1
 2011,Costa Rica,India,7,7
 2011,Hong Kong,India,,41
-2011,Macao,India,,3
+2011,"China, Macao SAR",India,,3
 2011,Czech,India,2,2
 2011,South Korea,India,,18
 2011,Moldova,India,1,4
@@ -77398,7 +77399,7 @@
 2011,Benin,Iraq,6,6
 2011,Guinea,Iraq,,4
 2011,Bolivia (Plurinational State of),Iraq,16,16
-2011,Macao,Iraq,1,1
+2011,"China, Macao SAR",Iraq,1,1
 2011,Czech,Iraq,173,173
 2011,Dominican Republic,Iraq,,7
 2011,Gambia,Iraq,,5
@@ -77470,7 +77471,7 @@
 2011,Ireland,Jamaica,8,10
 2011,Canada,Jamaica,408,825
 2011,Peru,Jamaica,,1
-2011,Curacao,Jamaica,6,7
+2011,Curaçao,Jamaica,6,7
 2011,United States of America,Jamaica,277,309
 2011,Philippines,Japan,,1
 2011,Australia,Japan,3,9
@@ -78647,7 +78648,7 @@
 2011,Panama,Pakistan,,2
 2011,Cote dIvoire,Pakistan,1,1
 2011,Hong Kong,Pakistan,21,83
-2011,Macao,Pakistan,,1
+2011,"China, Macao SAR",Pakistan,,1
 2011,Czech,Pakistan,20,20
 2011,Iran,Pakistan,12,27
 2011,South Korea,Pakistan,14,451
@@ -79800,7 +79801,7 @@
 2011,Togo,Syria,1,1
 2011,Benin,Syria,1,1
 2011,Costa Rica,Syria,,1
-2011,Macao,Syria,,4
+2011,"China, Macao SAR",Syria,,4
 2011,Czech,Syria,23,23
 2011,Dominican Republic,Syria,,1
 2011,South Korea,Syria,,2
@@ -80658,7 +80659,7 @@
 2012,Costa Rica,Afghanistan,2,2
 2012,Cote dIvoire,Afghanistan,13,13
 2012,Hong Kong,Afghanistan,7,11
-2012,Macao,Afghanistan,,1
+2012,"China, Macao SAR",Afghanistan,,1
 2012,Czech,Afghanistan,241,255
 2012,Iran,Afghanistan,824087,839135
 2012,South Korea,Afghanistan,10,32
@@ -81515,7 +81516,7 @@
 2012,Bolivia (Plurinational State of),Cameroon,1,1
 2012,Cote dIvoire,Cameroon,1,11
 2012,Hong Kong,Cameroon,,2
-2012,Macao,Cameroon,,1
+2012,"China, Macao SAR",Cameroon,,1
 2012,Congo,Cameroon,1,3
 2012,Czech,Cameroon,5,6
 2012,Gambia,Cameroon,1,1
@@ -81777,7 +81778,7 @@
 2012,Costa Rica,Colombia,10305,10665
 2012,Bolivia (Plurinational State of),Colombia,168,176
 2012,Hong Kong,Colombia,,12
-2012,Curacao,Colombia,6,8
+2012,Curaçao,Colombia,6,8
 2012,Dominican Republic,Colombia,,2
 2012,Syria,Colombia,,3
 2012,United States of America,Colombia,17766,17944
@@ -82077,7 +82078,7 @@
 2012,Panama,Cuba,1114,1122
 2012,Costa Rica,Cuba,818,874
 2012,Bolivia (Plurinational State of),Cuba,9,9
-2012,Curacao,Cuba,1,25
+2012,Curaçao,Cuba,1,25
 2012,Czech,Cuba,109,118
 2012,Dominican Republic,Cuba,,7
 2012,Russia,Cuba,1,1
@@ -83146,7 +83147,7 @@
 2012,Togo,India,,2
 2012,Costa Rica,India,7,7
 2012,Hong Kong,India,,68
-2012,Macao,India,,3
+2012,"China, Macao SAR",India,,3
 2012,Czech,India,2,2
 2012,South Korea,India,,3
 2012,Moldova,India,1,3
@@ -83443,7 +83444,7 @@
 2012,United Kingdom,Jamaica,472,576
 2012,Ireland,Jamaica,9,12
 2012,Canada,Jamaica,504,830
-2012,Curacao,Jamaica,7,7
+2012,Curaçao,Jamaica,7,7
 2012,United States of America,Jamaica,340,380
 2012,Australia,Japan,3,5
 2012,Japan,Japan,,1100
@@ -85869,7 +85870,7 @@
 2012,Benin,Syria,1,1
 2012,Costa Rica,Syria,,2
 2012,Hong Kong,Syria,,1
-2012,Macao,Syria,,1
+2012,"China, Macao SAR",Syria,,1
 2012,Czech,Syria,54,124
 2012,Dominican Republic,Syria,7,7
 2012,South Korea,Syria,,146
@@ -86729,7 +86730,7 @@
 2013,Costa Rica,Afghanistan,2,2
 2013,Cote dIvoire,Afghanistan,1,1
 2013,Hong Kong,Afghanistan,3,9
-2013,Macao,Afghanistan,,1
+2013,"China, Macao SAR",Afghanistan,,1
 2013,Czech,Afghanistan,238,248
 2013,Iran,Afghanistan,814015,822299
 2013,South Korea,Afghanistan,10,28
@@ -87619,7 +87620,7 @@
 2013,Bolivia (Plurinational State of),Cameroon,1,1
 2013,Cote dIvoire,Cameroon,1,9
 2013,Hong Kong,Cameroon,,3
-2013,Macao,Cameroon,,1
+2013,"China, Macao SAR",Cameroon,,1
 2013,Congo,Cameroon,1,3
 2013,Czech,Cameroon,6,8
 2013,South Korea,Cameroon,12,103
@@ -87889,7 +87890,7 @@
 2013,Costa Rica,Colombia,16586,16896
 2013,Bolivia (Plurinational State of),Colombia,178,182
 2013,Hong Kong,Colombia,1,17
-2013,Curacao,Colombia,6,20
+2013,Curaçao,Colombia,6,20
 2013,Dominican Republic,Colombia,1,5
 2013,United States of America,Colombia,13913,14297
 2013,Venezuela,Colombia,204259,205168
@@ -88204,7 +88205,7 @@
 2013,Costa Rica,Cuba,845,873
 2013,Bolivia (Plurinational State of),Cuba,9,9
 2013,British Virgin Islands,Cuba,,3
-2013,Curacao,Cuba,1,32
+2013,Curaçao,Cuba,1,32
 2013,Czech,Cuba,131,136
 2013,Dominican Republic,Cuba,,16
 2013,Moldova,Cuba,,3
@@ -89329,7 +89330,7 @@
 2013,Peru,India,2,12
 2013,Costa Rica,India,7,7
 2013,Hong Kong,India,,232
-2013,Macao,India,,3
+2013,"China, Macao SAR",India,,3
 2013,Czech,India,2,4
 2013,South Korea,India,,2
 2013,Moldova,India,1,2
@@ -89640,7 +89641,7 @@
 2013,Canada,Jamaica,621,854
 2013,Finland,Jamaica,,1
 2013,Panama,Jamaica,,1
-2013,Curacao,Jamaica,7,7
+2013,Curaçao,Jamaica,7,7
 2013,United States of America,Jamaica,380,635
 2013,Australia,Japan,5,12
 2013,Japan,Japan,,852
@@ -92236,8 +92237,8 @@
 2013,Bolivia (Plurinational State of),Syria,3,3
 2013,Cote dIvoire,Syria,2,14
 2013,Hong Kong,Syria,,2
-2013,Macao,Syria,,1
-2013,Curacao,Syria,1,1
+2013,"China, Macao SAR",Syria,,1
+2013,Curaçao,Syria,1,1
 2013,Czech,Syria,149,174
 2013,Dominican Republic,Syria,3,7
 2013,South Korea,Syria,,431
@@ -92853,7 +92854,7 @@
 2013,Panama,Venezuela,18,22
 2013,Costa Rica,Venezuela,221,237
 2013,Bolivia (Plurinational State of),Venezuela,1,1
-2013,Curacao,Venezuela,,1
+2013,Curaçao,Venezuela,,1
 2013,United States of America,Venezuela,7156,8060
 2013,Gabon,Viet Nam,4,4
 2013,Nauru,Viet Nam,,19
@@ -93148,7 +93149,7 @@
 2014,Costa Rica,Afghanistan,2,2
 2014,Cote dIvoire,Afghanistan,1,2
 2014,Hong Kong,Afghanistan,3,9
-2014,Macao,Afghanistan,0,1
+2014,"China, Macao SAR",Afghanistan,0,1
 2014,Czech,Afghanistan,228,235
 2014,Dominican Republic,Afghanistan,0,4
 2014,Iran,Afghanistan,950000,954545
@@ -94043,7 +94044,7 @@
 2014,Bolivia (Plurinational State of),Cameroon,1,1
 2014,Cote dIvoire,Cameroon,2,13
 2014,Hong Kong,Cameroon,0,1
-2014,Macao,Cameroon,0,1
+2014,"China, Macao SAR",Cameroon,0,1
 2014,Congo,Cameroon,1,4
 2014,Czech,Cameroon,6,9
 2014,Gambia,Cameroon,0,1
@@ -94329,7 +94330,7 @@
 2014,Costa Rica,Colombia,16623,16831
 2014,Bolivia (Plurinational State of),Colombia,184,187
 2014,Hong Kong,Colombia,0,24
-2014,Curacao,Colombia,27,40
+2014,Curaçao,Colombia,27,40
 2014,Dominican Republic,Colombia,1,1
 2014,United States of America,Colombia,10552,12296
 2014,Venezuela,Colombia,173519,173770
@@ -94640,7 +94641,7 @@
 2014,Panama,Cuba,1118,1299
 2014,Costa Rica,Cuba,858,962
 2014,Bolivia (Plurinational State of),Cuba,9,9
-2014,Curacao,Cuba,2,29
+2014,Curaçao,Cuba,2,29
 2014,Czech,Cuba,165,180
 2014,Dominican Republic,Cuba,0,16
 2014,Moldova,Cuba,3,3
@@ -95786,7 +95787,7 @@
 2014,Peru,India,2,3
 2014,Costa Rica,India,7,7
 2014,Hong Kong,India,3,305
-2014,Macao,India,0,3
+2014,"China, Macao SAR",India,0,3
 2014,Czech,India,3,5
 2014,South Korea,India,0,40
 2014,Moldova,India,1,1
@@ -96107,7 +96108,7 @@
 2014,Canada,Jamaica,733,811
 2014,Sweden,Jamaica,1,2
 2014,Panama,Jamaica,0,1
-2014,Curacao,Jamaica,7,7
+2014,Curaçao,Jamaica,7,7
 2014,United States of America,Jamaica,454,808
 2014,Australia,Japan,7,17
 2014,South Africa,Japan,1,1
@@ -98751,8 +98752,8 @@
 2014,Bolivia (Plurinational State of),Syria,6,6
 2014,Cote dIvoire,Syria,3,19
 2014,Hong Kong,Syria,0,2
-2014,Macao,Syria,0,1
-2014,Curacao,Syria,1,1
+2014,"China, Macao SAR",Syria,0,1
+2014,Curaçao,Syria,1,1
 2014,Czech,Syria,236,290
 2014,Dominican Republic,Syria,1,2
 2014,South Korea,Syria,503,567
@@ -99408,7 +99409,7 @@
 2014,Costa Rica,Venezuela,234,304
 2014,Bolivia (Plurinational State of),Venezuela,1,1
 2014,Hong Kong,Venezuela,0,1
-2014,Curacao,Venezuela,0,1
+2014,Curaçao,Venezuela,0,1
 2014,Czech,Venezuela,1,2
 2014,United States of America,Venezuela,6693,10710
 2014,Ecuador,Viet Nam,3,3
@@ -99708,7 +99709,7 @@
 2015,Costa Rica,Afghanistan,2,2
 2015,Cote dIvoire,Afghanistan,2,2
 2015,Hong Kong,Afghanistan,1,11
-2015,Macao,Afghanistan,0,1
+2015,"China, Macao SAR",Afghanistan,0,1
 2015,Czech,Afghanistan,234,240
 2015,Dominican Republic,Afghanistan,4,4
 2015,Iran,Afghanistan,951142,954056
@@ -100624,7 +100625,7 @@
 2015,Bolivia (Plurinational State of),Cameroon,2,2
 2015,Cote dIvoire,Cameroon,2,15
 2015,Hong Kong,Cameroon,0,1
-2015,Macao,Cameroon,0,1
+2015,"China, Macao SAR",Cameroon,0,1
 2015,Congo,Cameroon,2,10
 2015,Czech,Cameroon,6,9
 2015,South Korea,Cameroon,15,121
@@ -100910,7 +100911,7 @@
 2015,Costa Rica,Colombia,2247,2730
 2015,Bolivia (Plurinational State of),Colombia,193,193
 2015,Hong Kong,Colombia,0,24
-2015,Curacao,Colombia,34,49
+2015,Curaçao,Colombia,34,49
 2015,Dominican Republic,Colombia,1,5
 2015,United States of America,Colombia,8043,10611
 2015,Venezuela,Colombia,173673,175495
@@ -101219,7 +101220,7 @@
 2015,Ethiopia,Cuba,0,3
 2015,Costa Rica,Cuba,372,530
 2015,Bolivia (Plurinational State of),Cuba,9,9
-2015,Curacao,Cuba,5,14
+2015,Curaçao,Cuba,5,14
 2015,Czech,Cuba,228,258
 2015,Dominican Republic,Cuba,0,17
 2015,Moldova,Cuba,3,3
@@ -102393,7 +102394,7 @@
 2015,Peru,India,2,3
 2015,Costa Rica,India,4,4
 2015,Hong Kong,India,0,309
-2015,Macao,India,0,3
+2015,"China, Macao SAR",India,0,3
 2015,Czech,India,3,4
 2015,Micronesia (Federated States of),India,0,6
 2015,South Korea,India,0,294
@@ -102730,7 +102731,7 @@
 2015,Peru,Jamaica,0,1
 2015,Panama,Jamaica,0,7
 2015,Costa Rica,Jamaica,0,1
-2015,Curacao,Jamaica,7,7
+2015,Curaçao,Jamaica,7,7
 2015,United States of America,Jamaica,514,1018
 2015,Australia,Japan,7,12
 2015,South Africa,Japan,1,1
@@ -103071,7 +103072,7 @@
 2015,Ethiopia,Lebanon,0,1
 2015,Costa Rica,Lebanon,0,1
 2015,Cote dIvoire,Lebanon,1,1
-2015,Curacao,Lebanon,1,1
+2015,Curaçao,Lebanon,1,1
 2015,Czech,Lebanon,4,8
 2015,South Korea,Lebanon,0,3
 2015,Moldova,Lebanon,0,5
@@ -103166,7 +103167,7 @@
 2015,Guinea,Liberia,1768,1794
 2015,Cote dIvoire,Liberia,1040,1349
 2015,Hong Kong,Liberia,0,3
-2015,Macao,Liberia,0,1
+2015,"China, Macao SAR",Liberia,0,1
 2015,Congo,Liberia,2,9
 2015,Czech,Liberia,3,3
 2015,Gambia,Liberia,67,67
@@ -105445,9 +105446,9 @@
 2015,Bolivia (Plurinational State of),Syria,7,7
 2015,Cote dIvoire,Syria,20,28
 2015,Hong Kong,Syria,0,2
-2015,Macao,Syria,0,1
+2015,"China, Macao SAR",Syria,0,1
 2015,Congo,Syria,4,8
-2015,Curacao,Syria,1,4
+2015,Curaçao,Syria,1,4
 2015,Czech,Syria,365,407
 2015,Dominican Republic,Syria,1,2
 2015,South Korea,Syria,646,966
@@ -106159,7 +106160,7 @@
 2015,Costa Rica,Venezuela,141,420
 2015,Bolivia (Plurinational State of),Venezuela,1,1
 2015,Hong Kong,Venezuela,0,1
-2015,Curacao,Venezuela,0,3
+2015,Curaçao,Venezuela,0,3
 2015,Czech,Venezuela,3,3
 2015,Dominican Republic,Venezuela,0,1
 2015,United States of America,Venezuela,6193,17338
@@ -107207,7 +107208,7 @@
 2016,Panama,Colombia,15614,17302
 2016,Costa Rica,Colombia,2335,2802
 2016,Bolivia (Plurinational State of),Colombia,195,197
-2016,Curacao,Colombia,35,71
+2016,Curaçao,Colombia,35,71
 2016,Dominican Republic,Colombia,*,11
 2016,United States of America,Colombia,5803,9805
 2016,Venezuela,Colombia,171920,172956
@@ -107406,7 +107407,7 @@
 2016,Panama,Cuba,1118,1288
 2016,Costa Rica,Cuba,377,514
 2016,Bolivia (Plurinational State of),Cuba,9,9
-2016,Curacao,Cuba,6,13
+2016,Curaçao,Cuba,6,13
 2016,Czech,Cuba,228,278
 2016,Dominican Republic,Cuba,0,19
 2016,Serbia,Cuba,5,9
@@ -108334,7 +108335,7 @@
 2016,United Kingdom,Jamaica,364,546
 2016,Canada,Jamaica,832,1012
 2016,Panama,Jamaica,0,12
-2016,Curacao,Jamaica,7,7
+2016,Curaçao,Jamaica,7,7
 2016,United States of America,Jamaica,590,1270
 2016,Australia,Japan,10,14
 2016,Germany,Japan,37,38
@@ -110501,7 +110502,7 @@
 2016,Peru,Venezuela,147,3700
 2016,Panama,Venezuela,30,725
 2016,Costa Rica,Venezuela,269,1457
-2016,Curacao,Venezuela,*,16
+2016,Curaçao,Venezuela,*,16
 2016,Dominican Republic,Venezuela,0,20
 2016,United States of America,Venezuela,5519,34624
 2016,Philippines,Viet Nam,21,90
