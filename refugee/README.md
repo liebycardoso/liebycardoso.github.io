@@ -22,7 +22,7 @@ Eu coletei o feedback com os colegas de trabalho e amigos e as sugestões/críti
 
 1. "É muito lento o tanto de informação que passa no ínicio."
 
-Tratamento: Ao iniciar a página eu estava exibindo os dados de 1951 a 2016, não estava lento, mas como são muitos anos consumia algum tempo para concluir a exibição. O que eu fiz foi continuar carregando e trantando todos os dados, mas só exibindo a partir de 2008. No fim da exibição montei um slider com todos os anos, caso a pessoa tenha interesse em ver os dados anteriores.
+Tratamento: Ao iniciar a página eu estava exibindo os dados de 1951 a 2016, não estava lento, mas como são muitos anos consumia algum tempo para concluir a exibição. O que eu fiz foi continuar carregando e trantando todos os dados, mas só exibindo a partir de 2006. No fim da exibição montei um slider com todos os anos, caso a pessoa tenha interesse em ver os dados anteriores.
 
 2. "Se tivesse como ver pelo arco de qual país veio mais gente, seria interessante."
 
