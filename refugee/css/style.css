@@ -3,9 +3,9 @@
 }
 
 .circle {
-  fill: rgba(244,164,96, 0.6);
+  fill: rgba(245, 151, 75, 0.6);
   stroke: gray;
-  stroke-width: 0.7;
+  stroke-width: 0.8;
 }
 .land {
   fill: rgba(205,183,181, 0.3);
@@ -42,7 +42,7 @@ body {
 }
 
 .country:hover .country-arc {
-  stroke: rgba(247, 148, 32, 0.9);
+  stroke: rgba(247, 148, 32, 0.9) !important;
   fill: none;
   stroke-width: 1.5px;
 }
@@ -103,4 +103,36 @@ h2 {
     stroke-opacity: 0.5;
     stroke-width: 1.25px;
   }
-  
+
+  #explanation {
+    text-align: justify;
+  }
+
+/*  https://www.w3schools.com/howto/howto_css_social_media_buttons.asp*/
+.fa {
+    padding: 20px;
+    font-size: 10px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+#footer-social {
+  display: inline-block;
+  width: 100%;
+  background-color:  rgb(39, 37, 37);
+}
+
+h4 {
+  color: rgb(219, 111, 68);  
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(219, 111, 68);
+}

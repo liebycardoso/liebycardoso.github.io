@@ -20,18 +20,8 @@ var path = d3.geoPath()
 var voronoi = d3.voronoi()
     .extent([[-1, -1], [width + 1, height + 1]]);
 
-var opacityScale = d3.scaleLinear()
-    .range([1, 0.9, 0.4, 0.1, 0.1])
-    .domain([0, 3, 4, 6, 10])
-    .clamp(true);
-
 var destination = [],
     yearsList = [];
-
-var colorScale = d3.scaleLinear()
-    .range(['#fff7b9', '#fff196', '#ffea72', '#ffe348', '#fddc18'])
-    .domain([0, 1, 2, 4, 6])
-    .clamp(true);
 
 /* Carrega todos os arquivos que serão usados
 * unhcr_all_data: Arquivo com o país e o total de refugiados
@@ -40,9 +30,9 @@ var colorScale = d3.scaleLinear()
 */
 
 d3.queue()
-    .defer(d3.json, "geo.json")
-    .defer(d3.csv, "unhcr_all_data.csv", formatData)
-    .defer(d3.csv, "country.csv", formatCountry)
+    .defer(d3.json, "data/geo.json")
+    .defer(d3.csv, "data/unhcr_all_data.csv", formatData)
+    .defer(d3.csv, "data/country.csv", formatCountry)
     .await(ready);
 
 function ready(error, worldmap, countries, countryGeo) {
@@ -152,7 +142,7 @@ function ready(error, worldmap, countries, countryGeo) {
 
         // Inclui texto como o ano corrente 
         d3.select("h2")
-            .text("Total de refugiados recebidos por país em " + year);
+            .text("Number of refugees per country in " + year);
 
         // Calcula o voronoi para as posicoes
         var polygons = voronoi.polygons(filteredYear.map(projection));
@@ -196,12 +186,29 @@ function ready(error, worldmap, countries, countryGeo) {
             })
             .style("font-size", "16px");
 
+        //https://github.com/d3/d3-scale-chromatic
+        var scaleOrange = d3.scaleSequential(d3.interpolateOranges);
+                        
+        scaleOrange.domain([0,population_max]);
+
         /* Desenha os arcos */
         country.append("path")
             .attr("class", "country-arc")
-            .attr("d", function (d) { return path(d.arcs); })
-            .style("fill", function (d) { return colorScale(d.total_population) * 0.1; });
+            .attr("d", function (d) { return path(d.arcs); });
+            /*
+            .style("stroke", function (d) { 
+                return scaleOrange(d.total_population); 
+            }) 
+            .style("opacity", 0)          
+            //.style("stroke-opacity", 0)
+            .on("mouseover", function () {
+                d3.select(this).style("opacity", 1);
+                
+             }).on("mouseout", function () {
+                d3.select(this).style("opacity", 0);
+             });
 
+*/
         /* Desenha o voronoi */
         country.append("path")
             .data(polygons)
@@ -209,8 +216,7 @@ function ready(error, worldmap, countries, countryGeo) {
             .attr("d", function (d) { return d ? "M" + d.join("L") + "Z" : null; });
     }// drawn    
 
-    //indice para controle do loop por ano
-    var year_idx = 0;
+    
 
     // cria um novo array com um unico valor para cada ano
     var years = [...new Set(yearsList)];
@@ -218,6 +224,9 @@ function ready(error, worldmap, countries, countryGeo) {
     // ordena os anos em ordem crescente
     years.sort(function (a, b) { return a - b });
 
+    //indice para controle do loop por ano
+    var year_idx = years.length - 10;
+    
     var year_interval = setInterval(function () {
         drawn(+years[year_idx]);
 
