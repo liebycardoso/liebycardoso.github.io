@@ -361,8 +361,6 @@ function legend() {
       //SVG container
     var legend = d3.select('#chart')
     .append("svg")
-    //.attr("width", width + margin.left + margin.right)
-    //.attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
 
@@ -373,28 +371,22 @@ function legend() {
         {radius: Math.round(populationMax/4), opacity: 0.4,  offset: 100},
     ]
    
-    legend.selectAll(".title-legend")
-    .append("text-legend")
-    .text("Legend")
-    .attr("y", 10)
-    .attr("x", 20);
-
     legend.selectAll(".circle-legend")
-    .data(legendData)
-    .enter().append("circle")
-    .attr("class", "circle-legend")
-    .attr("cx", 20)
-    .attr("cy", function(d) { return d.offset; })
-    .attr("r", function (d) { return radius(d.radius); })
-    .style("fill", "#ffa500" )
-    .style("opacity", function(d) { return d.opacity; })
+        .data(legendData)
+        .enter().append("circle")
+        .attr("class", "circle-legend")
+        .attr("cx", 20)
+        .attr("cy", function(d) { return d.offset; })
+        .attr("r", function (d) { return radius(d.radius); })
+        .style("fill", "#ffa500" )
+        .style("opacity", function(d) { return d.opacity; })
 
     legend.selectAll(".legend-text")
-    .data(legendData)
-    .enter().append("text")
-    .attr("class", "legend-text")
-    .attr("x", 45)
-    .attr("y", function(d) { return d.offset; })
-    .attr("dy", "0.4em")
-    .text(function(d) { return d.radius.toLocaleString(); });
+        .data(legendData)
+        .enter().append("text")
+        .attr("class", "legend-text")
+        .attr("x", 45)
+        .attr("y", function(d) { return d.offset; })
+        .attr("dy", "0.4em")
+        .text(function(d) { return d.radius.toLocaleString(); });
 }
