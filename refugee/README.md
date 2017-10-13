@@ -1,9 +1,10 @@
 # Visualização de dados eficaz
-## Projeto: A refugee jorney
+# Projeto: Refugee journey
 
 ## Objetivo
 
-Este projeto tem o objetivo de demonstrar o tamanho da população de refugiados presente em cada país para cada ano de 1951 a 2016. Este assunto é relevante para a organização social e foi movida pela curiosidade de saber para onde eles iam, já que é mais comum a mídia dizer de quais países eles são. Houve uma mudança significativa na forma como este grupo está espalhado pelo mundo após a decada de 90. De acordo com o relatório de Tendências Globais da ACNUR, a partir de 1990 houve um aumento do deslocamento forçado, sendo observado nos últimos cinco anos um crescimento mais acelerado neste volume. Os conflitos na Somália, Afeganistão e Síria são exemplos de situações que colaboram para o aumento dessa população de atenção da ONU.
+Este projeto tem o objetivo de demonstrar o tamanho da população de refugiados presente em cada país para cada ano desde 1951 a 2016. Este assunto é relevante para a organização social e foi movida pela curiosidade de saber para onde eles iam, já que é mais comum a mídia dizer de quais países eles são. 
+Houve uma mudança significativa na forma como este grupo se espalhou pelo mundo após a década de 90. De acordo com o relatório de Tendências Globais da ACNUR, a partir de 1990 houve um aumento do deslocamento forçado, sendo observado nos últimos cinco anos um crescimento mais acelerado neste volume. Os conflitos na Somália, Afeganistão e Síria são exemplos de situações que colaboram para o aumento dessa população de atenção da ONU.
 
 https://s3.amazonaws.com/unhcrsharedmedia/2016/2016-06-20-global-trends/2016-06-14-Global-Trends-2015.pdf
 
@@ -13,7 +14,7 @@ unhcr_all_data: Os dados foram obtidos diretamento no site da UNHCR (The UN Refu
 country: Como o arquivo da ONU não tinha as coordenadas de latitude e longitude dos países, foi necessário obter um outro arquivo .CSV com essas informações. 
 geo: Para desenho do mapa mundi usei as coordenadas de outro arquivo em formato .JSON. 
 
-###Feedback
+## Feedback
 
 OBS: Os arquivos foram alterados para uma nova pasta do github, mas o histórico das alterações permanece no diretório.
 
@@ -23,7 +24,7 @@ Eu coletei o feedback com os colegas de trabalho e amigos e as sugestões/críti
 
 Tratamento: Ao iniciar a página eu estava exibindo os dados de 1951 a 2016, não estava lento, mas como são muitos anos consumia algum tempo para concluir a exibição. O que eu fiz foi continuar carregando e trantando todos os dados, mas só exibindo a partir de 2008. No fim da exibição montei um slider com todos os anos, caso a pessoa tenha interesse em ver os dados anteriores.
 
-2. "Se tivesse como ver pelo arco de qual pais veio mais gente, seria interessante."
+2. "Se tivesse como ver pelo arco de qual país veio mais gente, seria interessante."
 
 Tratamento: O projeto usa o efeito hover do css para definir quando exibir os arcos. Na tentativa de atender a este pedido, eu retirei o evento do css e passei para o .on( mouseover) do objeto. Criei uma escala de cor laranja em que quanto maior a população do país, mais forte seria a cor do ar. Apesar de ter conseguido reproduzir o efeito, o controle não ficou tão rápido como na camada do CSS, por isso, optei por não alterar a forma como estava implementado.
 
@@ -39,8 +40,6 @@ Tratamento: Apesar de não impactar no objetivo do projeto, achei valido criar u
 
 Tratamento: Incluído legenda no lado direito do mapa com a representação do total da poupulação.
 
-Tratamento: 
-
 ## Design - Do início ao Fim
 
 Quando eu começei o projeto eu já tinha uma idéia dos elementos básicos necessários, como 1 mapa, os desenhos do círculo e os arcos de ligação entre as informações.
@@ -48,7 +47,7 @@ Quando eu começei o projeto eu já tinha uma idéia dos elementos básicos nece
 A medida que o projeto foi desenvolvendo é que percebi, por exemplo, que o volume de dados que eu tinha necessitaria de uma interação do usuário para determinar se toda a informação deveria ser vista. A partir daí criei o slider. Outros elementos como Tooltip, efeitos de transição, delay e transparência de objetos foram usados para auxiliar a leitura das informações e interação com o usuário.
 
 ## Conclusão
-Quando iniciei este projeto, apesar dos exemplos e documentação na internet, tive dúvidas quanto a minha curva de aprendizagem nesta biblioteca do D3 e no próprio JS. A medida que o trabalho foi se desenvolvendo e o conteúdo se tornou mais sólido, comecei a me divertir fazendo o projeto. O D3.js me possibilitou fazer um trabalho que não me parecia possível a um tempo atras. Me concentrei em criar uma visualização de dados que fosse limpa e o com o mínimo de informações necessárias ao entendimento do tema. Espero que você goste! 
+No ínicio, apesar dos exemplos e documentação na internet, tive dúvidas quanto a minha curva de aprendizagem nesta biblioteca do D3 e no próprio JS. A medida que o trabalho foi se desenvolvendo e o conteúdo se tornou mais sólido, comecei a me divertir fazendo o projeto. O D3.js me possibilitou fazer um trabalho que não me parecia possível a um tempo atrás. Me concentrei em criar uma visualização de dados que fosse limpa e o com o mínimo de informações necessárias ao entendimento do tema. Espero que você goste! 
 
 ## Referências
 <ol>
