@@ -1,13 +1,13 @@
 # Visualização de dados eficaz
 ## Projeto: A refugee jorney
 
-###Objetivo
+## Objetivo
 
 Este projeto tem o objetivo de demonstrar o tamanho da população de refugiados presente em cada país para cada ano de 1951 a 2016. Este assunto é relevante para a organização social e foi movida pela curiosidade de saber para onde eles iam, já que é mais comum a mídia dizer de quais países eles são. Houve uma mudança significativa na forma como este grupo está espalhado pelo mundo após a decada de 90. De acordo com o relatório de Tendências Globais da ACNUR, a partir de 1990 houve um aumento do deslocamento forçado, sendo observado nos últimos cinco anos um crescimento mais acelerado neste volume. Os conflitos na Somália, Afeganistão e Síria são exemplos de situações que colaboram para o aumento dessa população de atenção da ONU.
 
 https://s3.amazonaws.com/unhcrsharedmedia/2016/2016-06-20-global-trends/2016-06-14-Global-Trends-2015.pdf
 
-###Dados
+## Dados
 
 unhcr_all_data: Os dados foram obtidos diretamento no site da UNHCR (The UN Refugee Agency). Este arquivo contém o nome do país de origem e destino e o total de refugiados. 
 country: Como o arquivo da ONU não tinha as coordenadas de latitude e longitude dos países, foi necessário obter um outro arquivo .CSV com essas informações. 
@@ -41,16 +41,16 @@ Tratamento: Incluído legenda no lado direito do mapa com a representação do t
 
 Tratamento: 
 
-### Design - Do início ao Fim
+## Design - Do início ao Fim
 
 Quando eu começei o projeto eu já tinha uma idéia dos elementos básicos necessários, como 1 mapa, os desenhos do círculo e os arcos de ligação entre as informações.
 
 A medida que o projeto foi desenvolvendo é que percebi, por exemplo, que o volume de dados que eu tinha necessitaria de uma interação do usuário para determinar se toda a informação deveria ser vista. A partir daí criei o slider. Outros elementos como Tooltip, efeitos de transição, delay e transparência de objetos foram usados para auxiliar a leitura das informações e interação com o usuário.
 
-### Conclusão
+## Conclusão
 Quando iniciei este projeto, apesar dos exemplos e documentação na internet, tive dúvidas quanto a minha curva de aprendizagem nesta biblioteca do D3 e no próprio JS. A medida que o trabalho foi se desenvolvendo e o conteúdo se tornou mais sólido, comecei a me divertir fazendo o projeto. O D3.js me possibilitou fazer um trabalho que não me parecia possível a um tempo atras. Me concentrei em criar uma visualização de dados que fosse limpa e o com o mínimo de informações necessárias ao entendimento do tema. Espero que você goste! 
 
-### Referências
+## Referências
 <ol>
 <li>https://bl.ocks.org/mbostock/7608400</li>
 <li>http://mbostock.github.io/d3/talk/20111116/airports.html</li>
