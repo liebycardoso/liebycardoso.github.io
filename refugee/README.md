@@ -58,5 +58,10 @@ No ínicio, apesar dos exemplos e documentação na internet, tive dúvidas quan
 <li>http://curran.github.io/screencasts/introToD3/examples/viewer/#/</li>
 <li>https://developer.mozilla.org/pt-BR/docs/Web/JavaScript</li>
 <li>https://www.w3schools.com/js/default.asp</li>
-<ol>
+<li>http://www.acnur.org/portugues/</li>
+<li>https://bl.ocks.org/mbostock/6452972</li>
+<li>https://stackoverflow.com/questions/39842004/why-use-regular-expressions-to-validate-latitude-and-longitude-in-javascript</li>
+<li>https://codemyviews.com/blog/inner-shadows-in-css-images-text-and-beyond</li>
+<li>https://www.w3schools.com/howto/howto_css_social_media_buttons.asp</li>
+</ol>
 
