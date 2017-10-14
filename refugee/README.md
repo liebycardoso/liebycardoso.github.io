@@ -40,6 +40,14 @@ Tratamento: Apesar de não impactar no objetivo do projeto, achei valido criar u
 
 Tratamento: Incluído legenda no lado direito do mapa com a representação do total da poupulação.
 
+6. Revisão Udacity
+6.1 - O país selecionado recebeu refugiados, ou foi o país de saída deles?
+
+Tratamento: Melhorei o texto do tooltip incluíndo explicitamente no texto que era o país de destino. Fiz um teste incluído uma seta com a direção do movimento nos arcos, mas não ficou bom porque todas as setas apontam para o mesmo círculo. Numa segunda versão, mudando o foco dos dados e mostrando a informação da origem para o destino, as setas ficariam mais adequadas.
+
+6.2 - Quantos refugiados exatamente estão associados a cada país?
+Tratamento: O total de refugiados recebidos por cada país está no tooltip e foi incluído no cabeçalho um novo texto descritivo com o total de refugiados no mundo naquele ano.
+
 ## Design - Do início ao Fim
 
 Quando eu começei o projeto eu já tinha uma idéia dos elementos básicos necessários, como 1 mapa, os desenhos do círculo e os arcos de ligação entre as informações.
