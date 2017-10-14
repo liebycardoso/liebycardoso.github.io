@@ -1,0 +1,72 @@
+.circle{
+  fill: rgba(244,164,96, 0.6);
+  stroke: gray;
+  stroke-width: 0.7;
+}
+.land {
+  fill: rgba(205,183,181, 0.3);
+}
+
+#cells.voronoi path.cell {
+  stroke: brown;
+}
+
+.country_borders {
+  fill: none;  
+  stroke: white;
+}
+
+.voronoi {
+  fill: none;
+  stroke: gray; 
+  stroke-opacity: 0.1;
+  pointer-events: all;
+}
+
+path.arc {
+  pointer-events: none;
+  fill: none;
+  stroke: #000;
+  display: none;
+}
+body {
+    background: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.country-arc {
+  fill: black;
+}
+.country:hover .country-arc {
+  stroke: rgba(247, 148, 32, 0.9);
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.country-cell {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: 0.1;
+  pointer-events: all;
+}
+
+.country:hover .country-link{
+  stroke: #f00;
+}
+
+/*code from: https://codemyviews.com/blog/inner-shadows-in-css-images-text-and-beyond*/
+#country-text {
+  font-size: 70px;
+  font-weight: bold;
+  background-color: #8B7765;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.4);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
+}
+#subcountry-text {
+  color: #8B7765;
+  font-size: 20px;
+  background: rgba(205,183,181, 0.1);
+}

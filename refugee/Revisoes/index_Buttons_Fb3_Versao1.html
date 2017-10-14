@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="country-text">Refugee Journey</div>
+  <div id="subcountry-text">Where did they come from?</div>
+  <!-- Slide year -->
+  <div id="year"></div>
+  <!-- Drawm map -->
+  <div id="chart"></div>
+  
+  <!-- The bigger text boxes that appear during the story -->
+  <div id="explanation" class="expl-text"></div>
+  <div id="explanationIntro" class="expl-text"></div>
+
+  <div id="week"></div>
+  <div id="legend"></div>
+  <div id="stopstart">loading data...</div>
+  <div id="explanation">
+    <p>UNHCR's populations of concern
+
+      <p>Refugees include individuals recognised under the 1951 Convention relating to the Status of Refugees; its 1967 Protocol;
+        the 1969 OAU Convention Governing the Specific Aspects of Refugee Problems in Africa; those recognised in accordance
+        with the UNHCR Statute; individuals granted complementary forms of protection; or those enjoying temporary protection.
+        Since 2007, the refugee population also includes people in a refugee-like situation.</p>
+
+      <p>Asylum-seekers are individuals who have sought international protection and whose claims for refugee status have
+        not yet been determined, irrespective of when they may have been lodged.</p>
+
+      <p>Internally displaced persons (IDPs) are people or groups of individuals who have been forced to leave their homes
+        or places of habitual residence, in particular as a result of, or in order to avoid the effects of armed conflict,
+        situations of generalised violence, violations of human rights, or natural or man-made disasters, and who have
+        not crossed an international border. For the purposes of UNHCR's statistics, this population only includes conflict-generated
+        IDPs to whom the Office extends protection and/or assistance. Since 2007, the IDP population also includes people
+        in an IDP-like situation. For global IDP estimates, see www.internal-displacement.org.</p>
+
+      <p>Returned refugees are former refugees who have returned to their country of origin spontaneously or in an organised
+        fashion but are yet to be fully integrated. Such return would normally only take place in conditions of safety
+        and dignity.</p>
+
+      <p>Returned IDPs refer to those IDPs who were beneficiaries of UNHCR's protection and assistance activities and who
+        returned to their areas of origin or habitual residence during the year.</p>
+
+      <p>Stateless persons are defined under international law as persons who are not considered as nationals by any State
+        under the operation of its law. In other words, they do not possess the nationality of any State. UNHCR statistics
+        refer to persons who fall under the agency’s statelessness mandate because they are stateless according to this
+        international definition, but data from some countries may also include persons with undetermined nationality.</p>
+
+      <p>Others of concern refers to individuals who do not necessarily fall directly into any of the groups above, but to
+        whom UNHCR extends its protection and/or assistance services, based on humanitarian or other special grounds.</p>
+      <p style="font-weight: 700;">Source: http://popstats.unhcr.org/en/overview</p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

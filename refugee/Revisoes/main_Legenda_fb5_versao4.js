@@ -48,7 +48,7 @@ function ready(error, worldmap, countries, countryGeo) {
 
     svg.append("path")
         .datum(topojson.mesh(worldmap, worldmap.objects.countries,
-            function (a, b) { return a !== b; }))
+                              function (a, b) { return a !== b; }))
         .attr("class", "country_borders")
         .attr("d", path);
 
@@ -66,7 +66,7 @@ function ready(error, worldmap, countries, countryGeo) {
         .rollup(aggCountry)
         .entries(countries);
 
-    var countryid = d3.map(countryGeo,
+    var countryid = d3.map(countryGeo, 
         function (d) { return d.country });
 
     var linkedCoords = [],
@@ -83,10 +83,10 @@ function ready(error, worldmap, countries, countryGeo) {
             try {
                 k[0] = +target[0];
                 k[1] = +target[1];
-            }
-            catch (err) {
+              }
+              catch (err) {
                 console.log(k.key);
-            }
+              }           
             k.year = yearTemp;
             sumPopulation = 0;
             k.total_origin = k.values.length;
@@ -118,10 +118,10 @@ function ready(error, worldmap, countries, countryGeo) {
     });
 
     delete destination.values;
-
+    
     destination = destination.filter(function (d) {
         return d.arcs.coordinates.length;
-    });
+    });    
 
 
     // cria um novo array com um unico valor para cada ano
@@ -132,7 +132,7 @@ function ready(error, worldmap, countries, countryGeo) {
 
     //indice para controle do loop por ano
     var yearIdx = years.length - 12;
-
+    
     var yearInterval = setInterval(function () {
         //Cria os elementos do mapa
         drawn(+years[yearIdx], destination);
@@ -143,7 +143,7 @@ function ready(error, worldmap, countries, countryGeo) {
         if (yearIdx >= years.length) {
             clearInterval(yearInterval);
 
-            slider(years);
+            slider(years); 
 
             legend();
         }
@@ -166,19 +166,19 @@ function formatCountry(d) {
 
 
 function isLatitude(lat) {
-    //code from: https://stackoverflow.com/questions/39842004/why-use-regular-expressions-to-validate-latitude-and-longitude-in-javascript
+//code from: https://stackoverflow.com/questions/39842004/why-use-regular-expressions-to-validate-latitude-and-longitude-in-javascript
     return isFinite(lat) && Math.abs(lat) <= 90;
 }
 
 function isLongitude(lng) {
-    //code from: https://stackoverflow.com/questions/39842004/why-use-regular-expressions-to-validate-latitude-and-longitude-in-javascript
+//code from: https://stackoverflow.com/questions/39842004/why-use-regular-expressions-to-validate-latitude-and-longitude-in-javascript
     return isFinite(lng) && Math.abs(lng) <= 180;
 }
 
 function aggCountry(leaves) {
-    /**
-     * Agrega os dados por Ano/Destino/Origem
-     */
+/**
+ * Agrega os dados por Ano/Destino/Origem
+ */
     var total = d3.sum(leaves, function (d) {
         return d['Total_Population'];
     });
@@ -199,50 +199,50 @@ function aggCountry(leaves) {
 }//agg_country
 
 function slider(years) {
-    /**
-     * Este trecho foi retirado do slider criado pelo Mike Bostock:
-     * fonte: //https://bl.ocks.org/mbostock/6452972
-     * Objetivo: Desenhar o objeto slider
-     *  @param {array} years Lista de anos
-     */
+/**
+ * Este trecho foi retirado do slider criado pelo Mike Bostock:
+ * fonte: //https://bl.ocks.org/mbostock/6452972
+ * Objetivo: Desenhar o objeto slider
+ *  @param {array} years Lista de anos
+ */
 
     var x = d3.scaleLinear()
-        .domain([years[0], years.slice(-1).pop()])
-        .range([0, 960])
-        .clamp(true);
+    .domain([years[0], years.slice(-1).pop()])
+    .range([0, 960])
+    .clamp(true);
 
     var slider = d3.select("#year").append("svg")
-        .attr("width", width + margin)
-        .attr("height", 40)
-        .append('g')
-        .attr("class", "slider")
-        .attr("transform", "translate(10 ," + 20 + ")");
+    .attr("width", width + margin)
+    .attr("height", 40)
+    .append('g')
+    .attr("class", "slider")
+    .attr("transform", "translate(10 ," + 20 + ")");
 
     slider.append("line")
-        .attr("class", "track")
-        .attr("x1", x.range()[0])
-        .attr("x2", x.range()[1])
-        .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
-        .attr("class", "track-inset")
-        .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
-        .attr("class", "track-overlay")
-        .call(d3.drag()
-            .on("start.interrupt", function () { slider.interrupt(); })
-            .on("start drag", function () { update(x.invert(d3.event.x)); }));
+    .attr("class", "track")
+    .attr("x1", x.range()[0])
+    .attr("x2", x.range()[1])
+    .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
+    .attr("class", "track-inset")
+    .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
+    .attr("class", "track-overlay")
+    .call(d3.drag()
+        .on("start.interrupt", function () { slider.interrupt(); })
+        .on("start drag", function () { update(x.invert(d3.event.x)); }));
 
     slider.insert("g", ".track-overlay")
-        .attr("class", "ticks")
-        .attr("transform", "translate(0," + 18 + ")")
-        .selectAll("text")
-        .data(x.ticks(((years.length - 1) / 2)))
-        .enter().append("text")
-        .attr("x", x)
-        .attr("text-anchor", "middle")
-        .text(function (d) { return d; });
+    .attr("class", "ticks")
+    .attr("transform", "translate(0," + 18 + ")")
+    .selectAll("text")
+    .data(x.ticks(((years.length - 1) / 2)))
+    .enter().append("text")
+    .attr("x", x)
+    .attr("text-anchor", "middle")
+    .text(function (d) { return d; });
 
     var handle = slider.insert("circle", ".track-overlay")
-        .attr("class", "handle")
-        .attr("r", 9);
+    .attr("class", "handle")
+    .attr("r", 9);
 
     function update(value) {
         var d = Math.round(value);
@@ -262,29 +262,18 @@ function drawn(year, destination) {
         return +d.total_population;
     });
 
-    populationSum = d3.sum(filteredYear, function (d) {
-        return +d.total_population;
-    });
-
     // Apura o raio (r) com base no máximo de populacao
     var radius = d3.scaleSqrt()
         .domain([0, populationMax])
         .range([0, 15]);
 
-    var populationSumTxt = function (value) {
-        return value > 1e6 ? ((value / 1e6).toFixed(3) 
-         + " million") : value.toLocaleString();
-    } 
     // Inclui texto como o ano corrente 
     d3.select("h2")
-        //.text("Number of refugees per country in " + year + ": " + Math.round(populationSum).toLocaleString());
-        .text(populationSumTxt(populationSum) + " refugees around the world in " + year);
-
-        
+        .text("Number of refugees per country in " + year);
 
     // Calcula o voronoi para as posicoes
     var polygons = voronoi.polygons(filteredYear.map(projection));
-
+    
     // Remove todos os objetos vinculados a classe country
     d3.selectAll(".country").remove();
 
@@ -293,17 +282,17 @@ function drawn(year, destination) {
         .enter()
         .append("g")
         .attr("class", "country");
-
+  
     // Remove todos os circulos que estão desenhados       
     d3.selectAll(".circle").remove();
 
-    // Vincula os elementos circulos com os dados filtrados  
+   // Vincula os elementos circulos com os dados filtrados  
     var circle = svg.selectAll('circle')
         .data(filteredYear)
         .enter()
         .append("g")
         .attr("class", "circle");
-
+   
     // Desenha Circulos 
     circle.append("circle")
         .attr('cx', function (d) { return projection([d[0], d[1]])[0]; })
@@ -315,36 +304,38 @@ function drawn(year, destination) {
         .duration(750)
         .style("opacity", 1);
 
-    // Cria a legenda para cada pais 
+   // Cria a legenda para cada pais 
     country.append("title")
         .text(function (d) {
-            return "Destination country: " + d.key + "\n" +
-                    "Refugees welcomed: " + d.total_population.toLocaleString() + "\n" +
-                    "From : " + d.total_origin + " countries";
+            return d.key + "\n" +
+                "Refugees: " + d.total_population.toLocaleString() + "\n" +
+                "From : " + d.total_origin + " countries";
         })
         .style("font-size", "16px");
-    /**
-     * Desenha a seta no fim do arco
-     
-    d3.selectAll("#arrowhead").remove();
-    svg.append("defs").append("marker")
-        .attr("id", "arrowhead")
-        .attr("refX", 6 + 3) 
-        .attr("refY", 2)
-        .attr("markerWidth", 6)
-        .attr("markerHeight", 4)
-        .attr("orient", "auto")
-        .append("path")
-        .attr("d", "M 0,0 V 4 L6,2 Z");
-    */
-    
+
+    //https://github.com/d3/d3-scale-chromatic
+    var scaleOrange = d3.scaleSequential(d3.interpolateOranges);
+                    
+    scaleOrange.domain([0,populationMax]);
+
     // Desenha os arcos 
     country.append("path")
         .attr("class", "country-arc")
-        //Associa o arco a seta
-        //.attr("marker-end", "url(#arrowhead)")
         .attr("d", function (d) { return path(d.arcs); });
-    
+        /*
+        .style("stroke", function (d) { 
+            return scaleOrange(d.total_population); 
+        }) 
+        .style("opacity", 0)          
+        //.style("stroke-opacity", 0)
+        .on("mouseover", function () {
+            d3.select(this).style("opacity", 1);
+            
+         }).on("mouseout", function () {
+            d3.select(this).style("opacity", 0);
+         });
+
+*/
     // Desenha o voronoi 
     country.append("path")
         .data(polygons)
@@ -358,44 +349,44 @@ function legend() {
         right: 10,
         bottom: 10,
         left: 10
-    };
+      };
     var width = 480 - margin.left - margin.right;
     var height = 130 - margin.top - margin.bottom;
-
-    // Apura o raio (r) com base no máximo de populacao
+            
+      // Apura o raio (r) com base no máximo de populacao
     var radius = d3.scaleSqrt()
-        .domain([0, populationMax])
-        .range([0, 15]);
+    .domain([0, populationMax])
+    .range([0, 15]);
 
-    //SVG container
+      //SVG container
     var legend = d3.select('#chart')
-        .append("svg")
-        .append("g")
-        .attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
+    .append("svg")
+    .append("g")
+    .attr("transform", "translate(" + (margin.left) + "," + (margin.top) + ")");
 
     //Legenda
     var legendData = [
-        { radius: populationMax, opacity: 1, offset: 20 },
-        { radius: Math.round(populationMax / 2), opacity: 0.7, offset: 65 },
-        { radius: Math.round(populationMax / 4), opacity: 0.4, offset: 100 },
+        {radius: populationMax, opacity: 1,  offset: 20},
+        {radius: Math.round(populationMax/2), opacity: 0.7,  offset: 65},
+        {radius: Math.round(populationMax/4), opacity: 0.4,  offset: 100},
     ]
-
+   
     legend.selectAll(".circle-legend")
         .data(legendData)
         .enter().append("circle")
         .attr("class", "circle-legend")
         .attr("cx", 20)
-        .attr("cy", function (d) { return d.offset; })
+        .attr("cy", function(d) { return d.offset; })
         .attr("r", function (d) { return radius(d.radius); })
-        .style("fill", "#ffa500")
-        .style("opacity", function (d) { return d.opacity; })
+        .style("fill", "#ffa500" )
+        .style("opacity", function(d) { return d.opacity; })
 
     legend.selectAll(".legend-text")
         .data(legendData)
         .enter().append("text")
         .attr("class", "legend-text")
         .attr("x", 45)
-        .attr("y", function (d) { return d.offset; })
+        .attr("y", function(d) { return d.offset; })
         .attr("dy", "0.4em")
-        .text(function (d) { return d.radius.toLocaleString(); });
+        .text(function(d) { return d.radius.toLocaleString(); });
 }

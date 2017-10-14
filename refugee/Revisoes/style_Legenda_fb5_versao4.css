@@ -31,25 +31,20 @@ path.arc {
 }
 
 body {
-  background: none;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  margin: auto;
-  max-width: 100%;
-  max-height: 100%;
-  width: 1125;
-  height: auto;
+    background: none;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1125;
+    height: auto;
 }
 
 .country:hover .country-arc {
   stroke: rgba(247, 148, 32, 0.9) !important;
   fill: none;
   stroke-width: 1.5px;
-}
-
-.country:hover #arrowhead {
-  stroke: rgba(57, 34, 7, 0.9) !important;
-  fill: none;  
 }
 
 /*code from: https://codemyviews.com/blog/inner-shadows-in-css-images-text-and-beyond*/
@@ -63,7 +58,6 @@ body {
      -moz-background-clip: text;
           background-clip: text;
 }
-
 h2 {
  /* color: #8B7765;*/
   color: rgb(216, 119, 40);
@@ -74,58 +68,58 @@ h2 {
 }
 
 
-/*Slider*/
-.ticks {
-  font: 8px sans-serif;
-}
+ /*Slider*/
+   .ticks {
+    font: 8px sans-serif;
+  }
+  
+  .track,
+  .track-inset,
+  .track-overlay {
+    stroke-linecap: round;
+  }
+  
+  .track {
+    stroke: #000;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+  }
+  
+  .track-inset {
+    stroke: #ddd;
+    stroke-width: 8px;
+  }
+  
+  .track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    stroke: transparent;
+    cursor: crosshair;
+  }
+  
+  .handle {
+    fill: #fff;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 1.25px;
+  }
 
-.track,
-.track-inset,
-.track-overlay {
-  stroke-linecap: round;
-}
-
-.track {
-  stroke: #000;
-  stroke-opacity: 0.3;
-  stroke-width: 10px;
-}
-
-.track-inset {
-  stroke: #ddd;
-  stroke-width: 8px;
-}
-
-.track-overlay {
-  pointer-events: stroke;
-  stroke-width: 50px;
-  stroke: transparent;
-  cursor: crosshair;
-}
-
-.handle {
-  fill: #fff;
-  stroke: #000;
-  stroke-opacity: 0.5;
-  stroke-width: 1.25px;
-}
-
-#explanation {
-  text-align: justify;
-}
+  #explanation {
+    text-align: justify;
+  }
 
 /*  https://www.w3schools.com/howto/howto_css_social_media_buttons.asp*/
 .fa {
-  padding: 20px;
-  font-size: 10px;
-  width: 20px;
-  text-align: center;
-  text-decoration: none;
+    padding: 20px;
+    font-size: 10px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
 }
 
 /* Add a hover effect if you want */
 .fa:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 #footer-social {
