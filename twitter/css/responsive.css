@@ -1,0 +1,89 @@
+/*
+* ----------------------------------------------------------------------------------------
+Author       : MS-Template
+Template Name: Ethan - Personal Resume Template
+Version      : 1.0                                                     
+* ----------------------------------------------------------------------------------------
+*/
+
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav li a {
+        padding: 15px 6px;
+    }
+    .me-image {
+        text-align: center;
+    }
+    .portfolio-caption h4 {
+        margin-top: 80px;
+    }
+    .single-testimonial {
+        padding: 80px 20px;
+    }
+}
+
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    .navbar-toggle .icon-bar {
+        background: #333;
+    }
+    .navbar-toggle {
+        margin-right: 0px;
+        margin-top: -30px;
+    }
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse {
+        background: #1B1B1B;
+    }
+    .navbar {
+        min-height: 0px;
+    }
+    .mainmenu .navbar-nav li a {
+        padding: 11px 15px;
+    }
+    .menu-bg .mainmenu .navbar-nav li a {
+        padding: 11px 15px;
+    }
+    .navbar-fixed-bottom .navbar-collapse,
+    .navbar-fixed-top .navbar-collapse {
+        max-height: 420px;
+    }
+    .navbar-toggle {
+        margin-top: -41px;
+    }
+    a.about-button {
+        margin-top: 0;
+    }
+    .single-testimonial {
+        padding: 30px 20px;
+    }
+    .single-contact {
+        margin-top: 20px;
+    }
+    .cd-headline span {
+        font-size: 12px;
+    }
+    .header-text h3 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+    .navbar-nav {
+        float: left;
+    }
+    .section-title h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}

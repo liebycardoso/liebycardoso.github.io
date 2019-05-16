@@ -1,0 +1,375 @@
+.twitter-tweet-head {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  background-color: #38A1F3;
+  width: 100%;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 16px 16px 16px 16px;
+}
+
+
+.twitter-tweet {
+  display: inline-block;
+  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  border-color: #eee #ddd #bbb;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  margin: 10px 5px;
+  padding: 0 16px 16px 16px;
+}
+
+.twitter-tweet p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+.twitter-tweet a {
+  color: inherit;
+  font-weight: normal;
+  text-decoration: none;
+  outline: 0 none;
+}
+
+.twitter-tweet a:hover,
+.twitter-tweet a:focus {
+  text-decoration: underline;
+}
+/*
+* ----------------------------------------------------------------------------------------
+* 11.FOOTER AREA CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.footer-area {
+    background: #F6F6F6;
+    color: #333;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.footer-area p {
+    margin: 0;
+}
+/
+
+body {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1px;
+    color: #161616;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+html,
+body {
+    height: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    transition: all 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0 none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section-padding {
+    padding: 60px 0px;
+}
+
+.section-title {
+    color: #333;
+    margin-bottom: 80px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.preloader-area {
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.scrollup {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 02.HEADER AREA CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.header-area {
+    background: url(https://liebycardoso.github.io/bgimage.JPG) no-repeat scroll 0 0 / cover;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    background-position: center center;
+}
+
+.header-area:before {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    content: "";
+}
+
+.header-area-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.header-area-tablecell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header-text {
+    color: gray;
+}
+
+.header-text h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cd-headline span {
+    font-size: 18px;
+}
+
+.cd-headline.clip.is-full-width {
+    margin: 0;
+}
+
+.cd-headline.clip.is-full-width span {
+    margin: 0;
+}
+
+.cd-headline.clip b {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-weight: 300;
+}
+
+.social-link {
+    margin-top: 20px;
+}
+
+.header-text h3 {
+    margin: 10px 0px;
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+
+.social-link {}
+
+.social-link a {
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.social-link a i {
+    font-size: 20px;
+}
+
+
+/*
+* ----------------------------------------------------------------------------------------
+* 03.MENUAREA CSS STYLE
+* ----------------------------------------------------------------------------------------
+*/
+
+.menu-area {
+    background: #F6F6F6;
+    position: relative;
+    padding: 5px 0px;
+    z-index: 999;
+}
+
+.is-sticky {
+    width: 100%;
+    z-index: 9999;
+    position: absolute;
+}
+
+.logo {}
+
+.logo a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #333;
+    letter-spacing: 10px;
+    line-height: 50px;
+    font-weight: 700;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-nav {
+    float: right;
+    position: relative;
+}
+
+.navbar-nav li a {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbar-nav li:hover:before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 70%;
+    height: 1px;
+    width: 30px;
+    margin-left: -15px;
+    background: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.nav li a:focus,
+.nav li a:hover {
+    text-decoration: none;
+    background: none;
+}
+
